@@ -1,6 +1,5 @@
-
+// Example program
 #include <iostream>
-#include<vector>
 #include <cstring>
 using namespace std;
 
@@ -16,56 +15,23 @@ class menu{
     
     public:
     
-    void Entry(){int check=0;
+    void Entry(){
         
-        cout<<"      !!!!!WELCOME TO AVARTAAN MENU OF 2019 EVERYONE!!!!!!       "<<endl;
+        cout<<"                      !!!!!WELCOME TO AVARTAAN MENU OF 2023 EVERYONE!!!!!!       "<<endl;
         
-        while(check!=1){
         cout<<"\t Enter the number of noodles packets we have "<<endl;
         cin>>Qnoodles;
-        if(Qnoodles<0){check=0;}
-        else check=1;
         cout<<"\t Enter the number of pasta packets we have "<<endl;
         cin>>Qpasta;
-        if(Qpasta<0){check=0;}
-        else check=1;
         cout<<"\t Enter the number of soup bowls we have "<<endl;
         cin>>Qsoup;
-        if(Qsoup<0){check=0;}
-        else check=1;
         cout<<"\t Enter the number of Ice cream bowls we have "<<endl;
         cin>>Qicecream;
         cout<<"\t Enter the number of Shake bottles we have "<<endl;
         cin>>Qshake;
-        if(Qshake<0){check=0;}
-        else check=1;}
           
         
     }
-
-void add(){int check=0;
-        
-        cout<<"      !!!!!WELCOME TO AVARTAAN MENU OF 2019 EVERYONE!!!!!!       "<<endl;
-        
-        while(check!=1){
-        cout<<"\t Enter the number of noodles packets we have "<<endl;
-        cin>>Qnoodles;
-        if(Qnoodles<0){check=0;}
-        else check=1;
-        cout<<"\t Enter the number of pasta packets we have "<<endl;
-        cin>>Qpasta;
-        if(Qpasta<0){check=0;}
-        else check=1;
-        cout<<"\t Enter the number of soup bowls we have "<<endl;
-        cin>>Qsoup;
-        if(Qsoup<0){check=0;}
-        else check=1;
-        cout<<"\t Enter the number of Ice cream bowls we have "<<endl;
-        cin>>Qicecream;
-        cout<<"\t Enter the number of Shake bottles we have "<<endl;
-        cin>>Qshake;
-        if(Qshake<0){check=0;}
-        else check=1;}}
     
     void Menu(){
         
@@ -73,7 +39,7 @@ void add(){int check=0;
     
     cout<<"\t Please select the choice "<<endl;
     cout<<" Price of the one bowl of Noodle is 50 Rs \n Price of one bowl of pasta is 70 Rs \n Price of one bowl of Tomato Soup is 55 Rs \n Price of one bowl if Ice Cream is 30 Rs \n Price of one glass of Shake is 50 rs "<<endl;
-    cout<<" Press 1 for Noodles \n Press 2 for Pasta \n Press 3 for Soup \n Press 4 for Ice Cream \n Press 5 for Shakes \n Press 6 for Transactions Details. \n Press 7 to Exit. "<<endl;
+    cout<<" Press 1 for Noodles \n Press 2 for Pasta \n Press 3 for Soup \n Press 4 for Ice Cream \n Press 5 for Shakes \n Press 6 for Transactions Details. "<<endl;
     cin>>choice;
     
     switch(choice){
@@ -89,7 +55,7 @@ void add(){int check=0;
         else{
             cout<<"\t"<<Qnoodles-Snoodles<<" Soup Bowl remians"<<endl;
             decision=0;}
-           cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cout<<"Do you want to order more ? Press 0 for more. "<<endl;
             cin>>decision;
             break;
         
@@ -104,7 +70,7 @@ void add(){int check=0;
         else{
            cout<<"\t"<<Qpasta-Spasta<<" Pasta Bowl remains"<<endl;
             decision=0;}
-            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cout<<"Do you want to order more ? Press 0 for more. "<<endl;
             cin>>decision;
             break;
             
@@ -119,7 +85,7 @@ void add(){int check=0;
         else{
             cout<<"\t"<<Qsoup-Ssoup<<"Soup Bowl remains"<<endl;
            decision=0;}
-            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cout<<"Do you want to order more ? Press 0 for more. "<<endl;
             cin>>decision;
             break;
         
@@ -134,7 +100,7 @@ void add(){int check=0;
         else{
             cout<<"\t"<<Qicecream-Sicecream<<"Ice Cream Bowl remains"<<endl;
             decision=0;}
-            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cout<<"Do you want to order more ? Press 0 for more. "<<endl;
             cin>>decision;
             break;
             
@@ -149,7 +115,7 @@ void add(){int check=0;
         else{
             cout<<"\t"<<Qshake-Sshake<<" Shakes remains"<<endl;
             decision=0;}
-            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cout<<"Do you want to order more ? Press 0 for more. "<<endl;
             cin>>decision;
             break;
             
@@ -187,13 +153,9 @@ void add(){int check=0;
         cout<<"Total Revenue is Rs"<<Tnoodles+Tsoup+Ticecream+Tpasta+Tshake<<endl;
         
         
-       cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
-        cin>>decision;
-        break;
-            
-        case 7:
-        decision=1;
-        break;
+            cout<<"Do you want to order more ? Press 0 for more. "<<endl;
+            cin>>decision;
+            break;
        
         
         
@@ -207,70 +169,8 @@ void add(){int check=0;
 }};
 
 int main()
-{
-vector<string> menu_obj {};
-menu_obj.push_back("Caterer");
-bool check {false};
-int choice;
-string userid;
-cout<<"Enter the choice: 1 if the userid is already created and 2 if New User id required and 3 if Caterer. "<<endl;
-cin>>choice;
-
-while(check!=true){
-cout<<"Enter the user id"<<endl;
-cin>>userid;
-menu menu_obj[0];
-switch(choice){
-case 1:
-{
-for(auto ch:menu_obj){
-    if(ch==userid){
-        cout<<"Enter Again";
-        check=false;
-        continue;}}
-    
-   
-        check=true;
-        menu_obj.push_back(userid);
-        menu userid;
-             
-
-userid.Menu();
-break;
-}
-case 2:{
-for(auto ch:menu_obj){
-    if(ch==userid){
-        cout<<"Enter Again";
-        check=false;}}
-menu userid;
-
-userid.Menu();
-break;}
-
-case 3:
-int caterer_choice=0;
-cout<<"What do you want to do: Press 1 for First Time and 2 for  Updataion of food items  :"<<endl;
-
-switch(caterer_choice){
-case 1:
-
-
-menu_obj[0].Entry();
-break;
-case 2:
-menu_obj[0].add();
-break;
-
-default
-break;
-
-
-}}}
-        
-    
-    
-
-    
-
+{menu m;
+m.Entry();
+m.Menu();
   
+}
