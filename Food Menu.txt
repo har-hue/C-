@@ -1,0 +1,276 @@
+
+#include <iostream>
+#include<vector>
+#include <cstring>
+using namespace std;
+
+class menu{
+    private:
+    int quantity, choice,decision=0;
+    //Quantity
+    int Qnoodles=0,Qpasta=0,Qsoup=0,Qicecream=0,Qshake=0;
+    //Sold
+    int Snoodles=0,Spasta=0,Ssoup=0,Sicecream=0,Sshake=0;
+    //Total_Sale
+    int Tnoodles=0,Tpasta=0,Tsoup=0,Ticecream=0,Tshake=0;
+    
+    public:
+    
+    void Entry(){int check=0;
+        
+        cout<<"      !!!!!WELCOME TO AVARTAAN MENU OF 2019 EVERYONE!!!!!!       "<<endl;
+        
+        while(check!=1){
+        cout<<"\t Enter the number of noodles packets we have "<<endl;
+        cin>>Qnoodles;
+        if(Qnoodles<0){check=0;}
+        else check=1;
+        cout<<"\t Enter the number of pasta packets we have "<<endl;
+        cin>>Qpasta;
+        if(Qpasta<0){check=0;}
+        else check=1;
+        cout<<"\t Enter the number of soup bowls we have "<<endl;
+        cin>>Qsoup;
+        if(Qsoup<0){check=0;}
+        else check=1;
+        cout<<"\t Enter the number of Ice cream bowls we have "<<endl;
+        cin>>Qicecream;
+        cout<<"\t Enter the number of Shake bottles we have "<<endl;
+        cin>>Qshake;
+        if(Qshake<0){check=0;}
+        else check=1;}
+          
+        
+    }
+
+void add(){int check=0;
+        
+        cout<<"      !!!!!WELCOME TO AVARTAAN MENU OF 2019 EVERYONE!!!!!!       "<<endl;
+        
+        while(check!=1){
+        cout<<"\t Enter the number of noodles packets we have "<<endl;
+        cin>>Qnoodles;
+        if(Qnoodles<0){check=0;}
+        else check=1;
+        cout<<"\t Enter the number of pasta packets we have "<<endl;
+        cin>>Qpasta;
+        if(Qpasta<0){check=0;}
+        else check=1;
+        cout<<"\t Enter the number of soup bowls we have "<<endl;
+        cin>>Qsoup;
+        if(Qsoup<0){check=0;}
+        else check=1;
+        cout<<"\t Enter the number of Ice cream bowls we have "<<endl;
+        cin>>Qicecream;
+        cout<<"\t Enter the number of Shake bottles we have "<<endl;
+        cin>>Qshake;
+        if(Qshake<0){check=0;}
+        else check=1;}}
+    
+    void Menu(){
+        
+    while(decision==0){    
+    
+    cout<<"\t Please select the choice "<<endl;
+    cout<<" Price of the one bowl of Noodle is 50 Rs \n Price of one bowl of pasta is 70 Rs \n Price of one bowl of Tomato Soup is 55 Rs \n Price of one bowl if Ice Cream is 30 Rs \n Price of one glass of Shake is 50 rs "<<endl;
+    cout<<" Press 1 for Noodles \n Press 2 for Pasta \n Press 3 for Soup \n Press 4 for Ice Cream \n Press 5 for Shakes \n Press 6 for Transactions Details. \n Press 7 to Exit. "<<endl;
+    cin>>choice;
+    
+    switch(choice){
+        case 1:
+        cout<<" Enter the number of Noodles Bowls you want "<<endl;
+        cin>>quantity;
+        if(Qnoodles-Snoodles>=quantity){
+            Snoodles=Snoodles+quantity;
+            Tnoodles=Tnoodles+quantity*50;
+            cout<<"\t"<<Qnoodles-Snoodles<<" Soup Bowl remians"<<endl;
+            }
+        
+        else{
+            cout<<"\t"<<Qnoodles-Snoodles<<" Soup Bowl remians"<<endl;
+            decision=0;}
+           cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cin>>decision;
+            break;
+        
+        case 2:
+        
+        cout<<" Enter the number of Pasta Bowls you want "<<endl;
+        cin>>quantity;
+        if(Qpasta-Spasta>=quantity){
+            Spasta=Spasta+quantity;
+            Tpasta=Tpasta+quantity*70;
+         cout<<"\t"<<Qpasta-Spasta<<" Pasta Bowl remains"<<endl;}
+        else{
+           cout<<"\t"<<Qpasta-Spasta<<" Pasta Bowl remains"<<endl;
+            decision=0;}
+            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cin>>decision;
+            break;
+            
+        case 3:
+        
+        cout<<" Enter the number of Soup Bowls you want "<<endl;
+        cin>>quantity;
+        if(Qsoup-Ssoup>=quantity){
+            Ssoup=Ssoup+quantity;
+            Tsoup=Tsoup+quantity*55;
+            cout<<"\t"<<Qsoup-Ssoup<<"Soup Bowl remains"<<endl;}
+        else{
+            cout<<"\t"<<Qsoup-Ssoup<<"Soup Bowl remains"<<endl;
+           decision=0;}
+            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cin>>decision;
+            break;
+        
+        case 4:
+        
+        cout<<" Enter the number of Ice Cream Bowls you want "<<endl;
+        cin>>quantity;
+        if(Qicecream-Sicecream>=quantity){
+            Qicecream=Qicecream+quantity;
+            Ticecream=Ticecream+quantity*30;
+            cout<<"\t"<<Qicecream-Sicecream<<"Ice Cream Bowl remains"<<endl;}
+        else{
+            cout<<"\t"<<Qicecream-Sicecream<<"Ice Cream Bowl remains"<<endl;
+            decision=0;}
+            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cin>>decision;
+            break;
+            
+        case 5:
+        
+        cout<<" Enter the number of Shake cup you want "<<endl;
+        cin>>quantity;
+        if(Qshake-Qshake>=quantity){
+            Sshake=Qshake+quantity;
+            Tshake=Tshake+quantity*50;
+            cout<<"\t"<<Qshake-Sshake<<" Shakes remains"<<endl;}
+        else{
+            cout<<"\t"<<Qshake-Sshake<<" Shakes remains"<<endl;
+            decision=0;}
+            cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+            cin>>decision;
+            break;
+            
+        case 6:
+        cout<<" Number of Noodles bowls sold = "<<Snoodles<<endl;
+        cout<<" Number of Noodles bowls remaining = "<<Qnoodles-Snoodles<<endl;
+        cout<<"Revenue by Noodles sales ="<<Tnoodles<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        
+        cout<<" Number of Pasta bowls sold = "<<Spasta<<endl;
+        cout<<" Number of Pasta bowls remaining = "<<Qpasta-Spasta<<endl;
+        cout<<"Revenue by Pasta sales ="<<Tpasta<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        
+        cout<<" Number of Soup bowls sold = "<<Ssoup<<endl;
+        cout<<" Number of Soup bowls remaining = "<<Qsoup-Ssoup<<endl;
+        cout<<"Revenue by Soup sales ="<<Tsoup<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        
+        cout<<" Number of Ice Cream bowls sold = "<<Sicecream<<endl;
+        cout<<" Number of Ice Cream bowls remaining = "<<Qicecream-Sicecream<<endl;
+        cout<<"Revenue by Ice Cream sales ="<<Ticecream<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        
+        cout<<" Number of Shakes sold = "<<Sshake<<endl;
+        cout<<" Number of Shakes remaining = "<<Qshake-Sshake<<endl;
+        cout<<"Revenue by Shakes sales ="<<Tshake<<endl;
+        cout<<"\n";
+        cout<<"\n";
+        
+        cout<<"Total Revenue is Rs"<<Tnoodles+Tsoup+Ticecream+Tpasta+Tshake<<endl;
+        
+        
+       cout<<"Do you want to order more ? Press 0 for more and 7 for exit "<<endl;
+        cin>>decision;
+        break;
+            
+        case 7:
+        decision=1;
+        break;
+       
+        
+        
+        
+        default:
+        cout<<" Invalid Choice, Please enter again "<<endl;
+        decision=0;
+        
+    }}
+    
+}};
+
+int main()
+{
+vector<string> menu_obj {};
+menu_obj.push_back("Caterer");
+bool check {false};
+int choice;
+string userid;
+cout<<"Enter the choice: 1 if the userid is already created and 2 if New User id required and 3 if Caterer. "<<endl;
+cin>>choice;
+
+while(check!=true){
+cout<<"Enter the user id"<<endl;
+cin>>userid;
+menu menu_obj[0];
+switch(choice){
+case 1:
+{
+for(auto ch:menu_obj){
+    if(ch==userid){
+        cout<<"Enter Again";
+        check=false;
+        continue;}}
+    
+   
+        check=true;
+        menu_obj.push_back(userid);
+        menu userid;
+             
+
+userid.Menu();
+break;
+}
+case 2:{
+for(auto ch:menu_obj){
+    if(ch==userid){
+        cout<<"Enter Again";
+        check=false;}}
+menu userid;
+
+userid.Menu();
+break;}
+
+case 3:
+int caterer_choice=0;
+cout<<"What do you want to do: Press 1 for First Time and 2 for  Updataion of food items  :"<<endl;
+
+switch(caterer_choice){
+case 1:
+
+
+menu_obj[0].Entry();
+break;
+case 2:
+menu_obj[0].add();
+break;
+
+default
+break;
+
+
+}}}
+        
+    
+    
+
+    
+
+  
